@@ -7,6 +7,60 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## HTML to Laravel 8
+
+Pertama kita akan membuat project baru dengan nama htmltolara8. Ketik perintah dibawah ini pada terminal (OS Linux dan Mac) atau pada CMD anda (OS Windows)
+
+`composer create-project --prefer-dist laravel/laravel htmltolara8`
+
+copy folder assets seperti `css`, `js`, `images`, `font`, `scss`, dan sejenisnya ke folder `public` yang ada didalam project `readxon-laravel-8`
+
+
+￼
+
+buat folder baru didalam folder resources >> view pada project htmltolara8
+
+￼
+
+Lalu buat file baru dengan nama master.blade.php dan home.blade.php
+￼
+
+Kemudian buat controller dengan nama templateController, dengan menjalankan perintah sebagai berikut:
+php artisan make:controller templateController
+
+￼
+Buka file index.html pada template dengan menggunakan text editor, misalkan VSC
+￼
+
+Kemudian copy paste seluruh code yang ada pada index.html ke master.blade.php
+￼
+
+Lalu, ketik perintah @extends ('FrontEnd.master') pada home.blade.php
+￼
+
+Pada Laravel 8, ada sedikit perbedaan dalam route. Ketik perintah 
+Route::get('/', [templateController::class, 'index']);
+
+dan jangan lupa masukkan perintah 
+
+use App\Http\Controllers\templateController; 
+
+pada bagian atas code
+
+￼
+
+Buka file templateController, kemudian ketik perintah
+
+    public function index(){
+
+        return view('FrontEnd.home');
+    }
+
+￼
+
+Kemudian jalankan perintah php artisan serve pada terminal atau cmd
+
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
