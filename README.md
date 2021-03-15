@@ -13,6 +13,8 @@ Pertama kita akan membuat project baru dengan nama htmltolara8. Ketik perintah d
 
 `composer create-project --prefer-dist laravel/laravel htmltolara8`
 
+<p align="center"><a href="https://agt.co.id" target="_blank"><img src="https://i.imgur.com/vHWDqnc.png" width="400"></a></p>
+
 copy folder assets seperti `css`, `js`, `images`, `font`, `scss`, dan sejenisnya ke folder `public` yang ada didalam project `readxon-laravel-8`
 
 
